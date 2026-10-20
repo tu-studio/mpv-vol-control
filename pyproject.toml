@@ -1,0 +1,15 @@
+[project]
+name = "mpv-vol-ctrl"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [{ name = "Max Weidauer", email = "max+git@weidauer.art" }]
+requires-python = ">=3.13"
+dependencies = ["imgui-bundle>=1.92.900"]
+
+[project.scripts]
+mpv-vol-ctrl = "mpv_vol_ctrl.main:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"

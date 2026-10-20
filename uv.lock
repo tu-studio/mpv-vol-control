@@ -1,0 +1,30 @@
+version = 1
+revision = 5
+requires-python = ">=3.14"
+
+[[package]]
+name = "imgui-bundle"
+version = "1.92.900"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/18/47/ff477f7258baddf0c02bbcf6406099c7ed78ebd63f3b9cebce899e6cf79a/imgui_bundle-1.92.900.tar.gz", hash = "sha256:1476409b76c7f600d0da472aed87e96382444df50695280b3ed9acd5065cb6c2", size = 48942607, upload-time = "2026-08-14T15:03:28.167Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/6e/d4/5492f22e7e0004b1a45d64cda60e111091b9c0dbaef19f84ed8a6e4d8e25/imgui_bundle-1.92.900-cp314-cp314-macosx_14_0_arm64.whl", hash = "sha256:3aaf647db05d3b1842e55abac92128b75469669bd22bc3eacfff54e59420db53", size = 10467206, upload-time = "2026-08-14T15:03:11.822Z" },
+    { url = "https://files.pythonhosted.org/packages/6c/2a/58d63506a738d3da2c3014cf07735c0ee288b09b22f9622cfe4a8a5141ce/imgui_bundle-1.92.900-cp314-cp314-manylinux_2_28_aarch64.whl", hash = "sha256:e24069c3f6cee3326a35e4d8ea43e234011caa2e21e90c3acab228c5f8dba66e", size = 12401028, upload-time = "2026-08-14T15:03:14.06Z" },
+    { url = "https://files.pythonhosted.org/packages/3d/b8/74fb268151629d9c41720b583bfed8a7d2df42988e9ea0fe160a60a83f5e/imgui_bundle-1.92.900-cp314-cp314-manylinux_2_28_x86_64.whl", hash = "sha256:5e135823f3051d55b8f4391c47f7a4c8370b9a8c8d9d3cb9d67227bc8add9396", size = 13551622, upload-time = "2026-08-14T15:03:16.229Z" },
+    { url = "https://files.pythonhosted.org/packages/b9/58/2a2ba35809deca99616be7cc6604a16eb1927f2588304549f98a90ac2ae3/imgui_bundle-1.92.900-cp314-cp314-musllinux_1_2_aarch64.whl", hash = "sha256:e522ffaaf57b7ca53a62abacb507819961168cbebd067a954a54798bcd205ce9", size = 13456527, upload-time = "2026-08-14T15:03:18.418Z" },
+    { url = "https://files.pythonhosted.org/packages/1b/7f/fe17a9f49afd4ee5a16b9df5391ff3b2aa9e50147c0c9856d681e912fe17/imgui_bundle-1.92.900-cp314-cp314-musllinux_1_2_x86_64.whl", hash = "sha256:8c558088f0fa5580b831fc7125429d46b1b4cb66e11d09f6a4070d846e921cd3", size = 14407812, upload-time = "2026-08-14T15:03:20.571Z" },
+    { url = "https://files.pythonhosted.org/packages/ab/0f/5b6e4a0cebcd0feb1792f271b086f4784b372c88e21dfc5a11e33e3f78be/imgui_bundle-1.92.900-cp314-cp314-pyemscripten_2026_0_wasm32.whl", hash = "sha256:1974a1b5cce7e67876610c7142f6a07b1434c76bb040f7177335f739756eeba7", size = 5082883, upload-time = "2026-08-14T15:27:17.743Z" },
+    { url = "https://files.pythonhosted.org/packages/0c/34/f6e719722815fcc287ee49d90935f0c7158c83765d49b2edc6b446593618/imgui_bundle-1.92.900-cp314-cp314-win_amd64.whl", hash = "sha256:3148a22630d1491fb2a6ff6df34e340f453c4e334acb6e5cf371cf2b7e8fd5d6", size = 11537848, upload-time = "2026-08-14T15:03:22.91Z" },
+    { url = "https://files.pythonhosted.org/packages/16/41/7ae43c889aab4a47a9a96d7bf9e3a79720dca273352a980a9959f4b7f4c4/imgui_bundle-1.92.900-cp314-cp314-win_arm64.whl", hash = "sha256:d7367ea2ef06e3b642dcfa5a7db6a2cebea54167a4c69be7e9344a913205ddc9", size = 11189559, upload-time = "2026-08-14T15:03:25.038Z" },
+]
+
+[[package]]
+name = "mpv-vol-ctrl"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "imgui-bundle" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "imgui-bundle", specifier = ">=1.92.900" }]
