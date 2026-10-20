@@ -144,7 +144,7 @@ muted = False
 next_update = 0
 next_save = 0
 update_timeout = 0.5
-state_save_timeout = 10
+state_save_timeout = 1
 
 
 def gui():
