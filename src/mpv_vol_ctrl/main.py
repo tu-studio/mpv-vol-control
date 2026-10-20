@@ -198,5 +198,5 @@ def main():
     global muted
     muted = bool(get_mute())
 
-    hello_imgui.run(gui, window_title="volume control", window_size=(300, 500))
+    hello_imgui.run(gui, window_title="volume control", window_size=(400, 800))
     client.close()
