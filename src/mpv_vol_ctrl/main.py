@@ -5,6 +5,8 @@ import json
 import time
 from pathlib import Path
 
+import subprocess
+
 from imgui_bundle import imgui, hello_imgui
 
 
@@ -31,6 +33,7 @@ def read_state():
 
 def save_state():
     state_path.mkdir(parents=True, exist_ok=True)
+
     print("saving")
     makedirs(state_path, exist_ok=True)
     with open(state_path / state_file, mode="w") as f:
@@ -191,12 +194,25 @@ def gui():
         next_save = time.time() + state_save_timeout
 
 
+def is_display_connected():
+    p = subprocess.run(
+        "xrandr --current", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True
+    )
+    return p.returncode == 0 and "*" in p.stdout.decode()
+
+
 def main():
     read_state()
     connect()
     # Prepare the payload with a trailing newline
     global muted
     muted = bool(get_mute())
+    while True:
+        if is_display_connected():
+            hello_imgui.run(gui, window_title="volume control", window_size=(400, 800))
+            print("window closed")
+        else:
+            print("no display found, retrying...")
+            time.sleep(5)
 
-    hello_imgui.run(gui, window_title="volume control", window_size=(400, 800))
     client.close()
