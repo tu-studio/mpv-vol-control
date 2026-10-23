@@ -34,7 +34,6 @@ def read_state():
 def save_state():
     state_path.mkdir(parents=True, exist_ok=True)
 
-    print("saving")
     makedirs(state_path, exist_ok=True)
     with open(state_path / state_file, mode="w") as f:
         f.write(f"{vol_prefix}{volume}\n")
